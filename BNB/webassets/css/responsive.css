@@ -1,0 +1,415 @@
+/*/ Smartphones (portrait and landscape) ----------- /*/
+@media only screen
+and (min-device-width : 320px) and (max-device-width : 480px) {
+    /*    .logo-white img{
+            margin-left: -20px;
+        }*/
+    .mobile-header-cart{
+        background-color: #fff;
+        padding-left: 0px;
+        height: 70px;
+        text-align: center;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),0 2px 5px 0 rgba(0,0,0,0.12);
+        top: 68px;
+        left: 0px;
+    }
+    .h-cart-section{
+        float: none;
+        text-align: center;
+        display: inline-block
+    }
+    .cart-mobile{
+        margin-top: 80px;
+    }
+    .z-in-mobile{
+        z-index: -99999999999999;
+    }
+    .shopping-cart1 {
+        margin: 90px 0;
+        right: 0px;
+        top: 93px;
+    }
+    .mobile-container{
+        padding-left: 0px;
+    }
+    .sp-image-container .sp-image {
+        height: 200px !important;
+        width: 277px !important;
+    }
+    .sp-bottom-thumbnails.sp-has-pointer {
+        margin-top: -64px;
+    }
+    .clear-display{
+        display: inherit;
+    }
+    .best-seller{
+        margin-top: 15px;
+    }
+    .h-populer-band-list li:first-child{
+        margin-left: 15px;
+    }
+    .store-pop-right{
+        margin-left: 15px !important;
+    }
+    .banner-cata-sm {
+        width: 93%;
+        height: auto;
+    }
+    .banner-cata-big {
+        width: 93%;
+        height: auto;
+    }
+    .header-top-menu li {
+        padding: 0 0px;
+        line-height: 20px;
+        margin-left: 14px;
+    }
+    .header-top-menu li a{
+        font-size: 12px;
+    }
+    .h-add{
+        margin-top: 30px;
+    }
+    .h-populer-band-list li {
+        width: 112px ;
+    }
+    .h-po-band-logo{
+        margin-right: 13px !important;
+    }
+    .h-populer-band .h-po-band-tittle h3 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .related-navigation {
+        position: relative;
+        top: -12px;
+        right: -1px;
+    }
+    .mobile-navigration{
+        top: -10px !important;
+        right:10px !important;
+    }
+    .h-ca-fa-body .h-ca-product-image img, .h-ca-fa-section .h-ca-product-image img{
+        height: 295px;
+        width: 311px;
+    }
+    .h-ca-fa-body .h-ca-fa-description{
+        border-right: 0px;
+        height: 225px;
+    }
+    .h-ca-fa-body .h-ca-fa-right-des img{
+        position: relative;
+        /*left: 46px;*/
+    }
+    .h-ca-fa-body .h-ca-fa-right-des {
+        top: -26px;
+    }
+    .pri-description-ca-h .cata-h-btn{
+        position: relative;
+        top: -464px;
+        left: 194px;
+    }
+    .h-ca-fa-body:hover .cata-h-btn{
+        position: relative;
+        top: -401px;
+        left: 194px;
+    }
+    .h-populer-band .h-po-band-tittle h3 {
+        font-size: 11px;
+        font-weight: 600;
+    }
+    .h-populer-band .h-po-band-tittle span {
+        font-size: 9px;
+        font-weight: 600;
+    }
+    .mobile-overflow{
+        overflow: hidden;
+    }
+    .zoom-wrapper {
+        position: relative;
+        left: -27px;
+    }
+    #gallery_09 img {
+        width: 85px;
+    }
+    .h-de-fa-right h2 {
+        font-size: 16px !important;
+    }
+    .fa-de-size .select {
+        width: 244px;
+    }
+    .quantity{
+        margin-bottom: 15px;
+    }
+    .mobile-hotel{
+        border-right: 0px;
+        height: 498px !important;
+    }
+
+    /*checkout-page*/
+    .stepwizard-row::before {
+        position: absolute;
+        content: " ";
+        width: 100% !important;
+        left: 63px !important;
+    }
+    .mobile-wizard-1{
+        position: relative;
+        left: 21px
+    }
+    .mobile-wizard-2{
+        position: relative;
+        left: 61px;
+    }
+    .mobile-wizard-3{
+        position: relative;
+        left: 111px;
+    }
+    /*hotel-details*/
+    .h-ca-fa-body:hover .hotel-rel-cata-h-btn{
+        position: relative;
+        bottom: 0px;
+        top: -30px;
+        left: 110px;
+        -webkit-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+    .mobile-pri-description-ca-h {
+        height: auto;
+    }
+    .user-content-section{
+        margin-top: 30px;
+    }
+    .cata-fashion-section-pa{
+        width: 91%;
+    }
+    .h-ca-hotel-section {
+        height: 432px;
+        width: 91%;
+    }
+    .h-ca-hotel-section:hover .hotel-rel-cata-h-btn{
+        top:  -27px;
+    }
+    .catagroy-hotel-section{
+        height: auto;
+    }
+    .catagroy-hotel-section .h-ca-fa-description{
+        height: auto;
+        width: 100%;
+    }
+    .catagroy-hotel-section .h-ca-fa-right-des {
+        position: relative;
+        top: -5px;
+    }
+    .h-ca-hotel-section .h-ca-fa-body-hotel{
+        overflow: visible;
+    }
+    .mobile-top-cart h5{
+        margin-top: 0px !important;
+    }
+    .store-logo{
+        position: relative;
+        left: 20%;
+    }
+}
+
+
+/*/ iPads (portrait and landscape) ----------- /*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .container {
+        width: 100%;
+    }
+    .sp-image-container .sp-image {
+        height: 203px !important;
+        width: 371px !important;
+    }
+    .sp-bottom-thumbnails.sp-has-pointer {
+        /*margin-top: 54px;*/
+    }
+    .sp-slide{
+        /*top: 0px !important;*/
+    }
+    .h-populer-band-list li {
+        width: 176px;
+        height: 54px;
+    }
+    .h-populer-band-list li:first-child{
+        margin-left: 15px;
+    }
+    .banner-cata-sm {
+        width: 93%;
+        height: auto;
+    }
+    .banner-cata-big {
+        width: 93%;
+        height: auto;
+    }
+    .store-pop-right{
+        margin-left: 15px !important;
+    }
+    .best-seller-main-section img {
+        width: 253px;
+        height: 189px;
+    }
+    .h-populer-band-list li img {
+        width: 176px;
+        height: 54px;
+    }
+    .h-populer-band .h-po-band-tittle h3 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .h-populer-band-list li img {
+        width: 176px;
+        height: 52px;
+    }
+    .secondary-menu li a:hover{
+        color: #F7CA18 !important;
+    }
+    .secondary-menu .menu-name1{
+        margin-right: -21px !important;
+    }
+    .secondary-menu .menu-name2{
+        margin-right: -10px !important;
+    }
+    .secondary-menu .menu-name3{
+        margin-right: -5px !important;
+    }
+    .secondary-menu li a {
+        font-size: 12px;
+    }
+    .main-logo img{
+        position: relative;
+        top: 23px;
+        width: 98px;
+    }
+    .shopping-cart1{
+        right: 5px;
+    }
+    .mobile-ho-p{
+        padding-left: 2px !important;
+    }
+    .stepwizard-row::before {
+        left: 78px;
+    }
+    .mobile-navigration {
+        top: -10px !important;
+        right: 10px !important;
+    }
+    .pri-description-ca-h .cata-h-btn{
+        position: relative !important;
+        top: -464px !important;
+        left: 274px !important;
+    }
+    .h-ca-fa-body:hover .cata-h-btn{
+        position: relative;
+        top: -377px;
+        left: 274px;
+    }
+    .mobile-pri-description-ca-h {
+        height: auto;
+    }
+    .h-ca-fa-body:hover .hotel-rel-cata-h-btn{
+        position: relative;
+        bottom: 0px;
+        top: -364px;
+        left: 274px;
+    }
+    .h-ca-fa-body .hotel-rel-cata-h-btn{
+        top: 96px;
+        left: 86px;
+        -webkit-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+    .cata-fashion-section-pa{
+        width: 47%;
+        margin-top: 10px;
+    }
+    .h-ca-hotel-section {
+        height: 482px;
+        width: 94%;
+    }
+    .h-ca-hotel-section:hover .hotel-rel-cata-h-btn{
+        top:  -27px;
+    }
+    .tab-clear{
+        clear: both;
+    }
+    .h-ca-hotel-section .h-ca-fa-body-hotel{
+        overflow: visible;
+    }
+}
+
+@media only screen and (min-device-width : 980px) and (max-device-width : 1280px) {
+    .container {
+        width: 100%;
+    }
+    .h-populer-band-list li {
+        width: 184px;
+        height: 74px;
+    }
+    .h-populer-band-list li img {
+        width: 234px;
+        height: 72px;
+    }
+    .sp-image-container .sp-image {
+        height: 203px !important;
+        width: 590px !important;
+    }
+    .best-seller-main-section img {
+        width: 192px;
+        height: 150px;
+    }
+    .banner-cata-sm {
+        width: 30%;
+        height: auto;
+        margin-bottom: 0px;
+    }
+    .banner-cata-big {
+        width: 59%;
+        height: auto;
+    }
+    .h-ca-hotel-section {
+        height: 482px;
+        width: 94%;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .container {
+        width: 1170px !important;
+    }
+
+}
+
+@media only screen and (max-width: 749px) {
+    .container {
+        width: 100%; 
+    }
+}
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 100%; 
+    }
+    .h-ca-hotel-section:hover .hotel-rel-cata-h-btn {
+        top: -27px;
+        left: 94px;
+    }
+}
+@media only screen and (max-width: 601px) {
+    .container {
+        width: 100%; 
+    }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
+    .h-populer-band-list li {
+        width: 132px;
+    }
+    .shopping-cart1 {
+        margin: 90px 0;
+        right: 26px;
+        top: 93px;;
+    }
+}

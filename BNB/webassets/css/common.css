@@ -1,0 +1,81 @@
+input:focus:not([type]):not([readonly]), input[type="text"]:focus:not([readonly]), input[type="password"]:focus:not([readonly]), input[type="email"]:focus:not([readonly]), input[type="url"]:focus:not([readonly]), input[type="time"]:focus:not([readonly]), input[type="date"]:focus:not([readonly]), input[type="datetime"]:focus:not([readonly]), input[type="datetime-local"]:focus:not([readonly]), input[type="tel"]:focus:not([readonly]), input[type="number"]:focus:not([readonly]), input[type="search"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #E74C3C !important;
+    box-shadow: 0 1px 0 0 #E74C3C !important;
+}
+[type="checkbox"]:checked + label::before {
+    border-color: transparent #E74C3C #E74C3C transparent !important;
+
+}
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #333 !important;
+}
+
+
+.modal-content {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+.form-group{
+    margin-bottom: 0px;
+}
+.row{
+    margin-bottom: 0px !important;
+}
+.caret {
+    border-color: transparent !important;
+}
+label{
+    font-weight: normal;
+    /*height: 100% !important;*/
+}
+.tabs .indicator{
+    background-color: inherit !important; 
+}
+.clearfix{
+    clear: both;
+}
+label{
+    color: #5d5d5d !important;
+}
+
+.select{
+    color:#5d5d5d !important; 
+}
+.clear-display{
+    display: inline-flex;
+}
+.search-bg{
+    background-color: #f2f2f2;
+    margin-top: 10px !important;
+    width: 99%;
+}
+.breadcrumb li{
+    font-size: 14px;
+}
+.cart-section .heading-text{
+    background: rgb(221, 221, 221) none repeat scroll 0% 0%;
+    padding: 14px;
+}
+.cart-section .heading-text h6{
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+    font-weight: 500;
+}
+
+.cash-payment label, .bank-account label{
+    height: 100% !important;
+}
+.cash-payment-condation{
+    display:none;
+}
+.bank-payment-condation {
+    display: none;
+}
+.cash-payment-condation ul{
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+.cash-payment-condation ul li{
+    list-style-type:square
+}
