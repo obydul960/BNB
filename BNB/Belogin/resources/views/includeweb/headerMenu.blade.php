@@ -63,8 +63,6 @@
                  <li class="tab col s2"><a href="{{URL::to('/')}}/categorydetails/{{$m6->id}}/{{$m6->manu_name}}" target="_Self">{{$m6->manu_name}}</a></li>
                  @endif 
             </ul>
-             <div id="content">click any menu above to change content here</div>
-            <div class="loading"></div>
  
             
             </div>
@@ -110,6 +108,6 @@
             </div> <!--end shopping-cart -->
         </div>
     </div>
-     
+
 </section>
     
