@@ -66,7 +66,7 @@
            </div>
        </section>
 
-       <section class=" clearfix" style=" margin-top: 15px;">
+      <!--  <section class=" clearfix" style=" margin-top: 15px;">
            <div class="container">
                <div class="row">
                    <ul class="cata-banner-ho">
@@ -115,7 +115,7 @@
                    </ul>
                </div>
            </div>
-       </section>
+       </section> -->
 
        <!--start fashion-->
        <section>

@@ -40,14 +40,24 @@
             </div>
             <div class="col-md-7 col-sm-9">
             <ul class="tabs secondary-menu hidden-xs" id="menu-list5">
-                <li class="tab col s2 menu-name1"><a  href="index.html" >Home</a></li>
-                @foreach($v=App\Model\MainManuModel::where('status','=',1)->take(4)->get() as $value)
-                <li class="tab col s2 menu-name1"><a  href="catagory_fashoion.html" target="_Self">Fashion</a></li>
-                @endforeach
-               <!--  <li class="tab col s2 menu-name1"><a href="catagory_hotel.html" target="_Self">Hotel</a></li>
+                <li class="tab col s2 menu-name1"><a  href="{{URL::to('/')}}" >Home</a></li>
+                 @if($m1=App\Model\MainManuModel::where('status','=',1)->where('manu_indexing','=',1)->first())
+                 <li class="tab col s2 menu-name1">
+                <a  href="{{URL::to('/')}}/categorydetails/{{$m1->id}}/{{$m1->name}}" target="_Self">{{$m1->name}}</a>
+                </li>
+                 @endif
+                 @if($m2=App\Model\MainManuModel::where('status',1)->where('manu_indexing',2)->first())
+                <li class="tab col s2 menu-name1"><a href="catagory_hotel.html" target="_Self">Hotel</a></li>
+                @endif
+                @if($m1=App\Model\MainManuModel::where('status','=',1)->where('manu_indexing','=',1)->first())
                 <li class="tab col s2 menu-name2"><a href="catagory_hotel.html" target="_Self">Tourism</a></li>
-                 <li class="tab col s2 menu-name3"><a href="catagory_hotel.html" target="_Self">Decorator</a></li>-->
-                 <li class="tab col s2"><a href="catagory_hotel.html" target="_Self">HouseHold</a></li> 
+                @endif
+                @if($m1=App\Model\MainManuModel::where('status','=',1)->where('manu_indexing','=',1)->first())
+                 <li class="tab col s2 menu-name3"><a href="catagory_hotel.html" target="_Self">Decorator</a></li>
+                 @endif
+                 @if($m1=App\Model\MainManuModel::where('status','=',1)->where('manu_indexing','=',1)->first())
+                 <li class="tab col s2"><a href="catagory_hotel.html" target="_Self">HouseHold</a></li>
+                 @endif 
             </ul>
               
             

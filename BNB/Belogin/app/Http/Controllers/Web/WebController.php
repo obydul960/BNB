@@ -22,6 +22,10 @@ class WebController extends Controller{
 	public function login(){
 		return view('front_web.login');
 	}
+    // home menu show
+    // public function topMenu(){
+    //     $manu1=MainManuModel::where()->get();
+    // }
 
 	// normal user login system
 	public function userLogin(Request $request){
