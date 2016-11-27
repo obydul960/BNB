@@ -11,6 +11,8 @@ use App\Model\SliderModel;
 use App\Model\MarchentRegModel;
 use App\Model\AllUserModel;
 use App\Model\division;
+use App\Model\ProductAddModel;
+use App\Model\AddRomeModel;
 use App\User;
 use Hash;
 use Session;
@@ -144,8 +146,8 @@ public function userProfielUpdate(Request $request,$user_id){
             ]);
             Session::flash('success', 'Successfully updated');
             return redirect::to("userprofile");
-        
-     
+
+
         }
         else{
             Session::flash('error', 'Please try again later...');
@@ -155,7 +157,7 @@ public function userProfielUpdate(Request $request,$user_id){
 
 // merchant reg form
 public function merchantReg(){
-  return view('front_web.merchantReg');  
+  return view('front_web.merchantReg');
 }
 
 // merchant registation system
@@ -223,7 +225,7 @@ public function merchantRegistation(Request $request){
                 Session::flash('success', 'Registation successfully completed');
                 return redirect::to('merchantReg');
             }
-            }    
+            }
 }
 
 

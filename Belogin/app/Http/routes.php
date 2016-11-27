@@ -45,6 +45,7 @@ Route::get('subcatergory', function(){
 
 
 Route::get('/dashBoard', 'HomeController@dashBord');
+//webhome
 Route::get('/','HomeController@homepage');
 //Category Manage by coustomJavascript date:7-9-16 (cmplete)
 Route::get('maninManu','CategoryController@mainManu');

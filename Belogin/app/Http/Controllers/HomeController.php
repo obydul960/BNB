@@ -13,6 +13,7 @@ use App\Model\Tourist\TouristManageModel;
 use App\Model\SliderModel;
 use App\Model\MarchentRegModel;
 use App\Model\MainManuModel;
+use App\Model\ProductAddModel;
 use App\User;
 use DB;
 use Auth;
@@ -74,7 +75,14 @@ class HomeController extends Controller
             $totalCancelled = ProductOrderManageModel::where('status', '=', 2)->count();
 
             //$totalProfit=DB::table('product_add')->Where('marchent_id','=',Auth::user()->user_id)->sum('id');
-            return view('welcome', compact('bnbTodayOrder', 'bnbproductOrderList', 'bnbTouristOderList', 'bnbRoomOrderList', 'bnbTotalProduct', 'bnbTotalTourCommission', 'bnbTotalTourProfit', 'bnbTotalpackageNumber', 'bnbTotalHotelCommission', 'bnbTotalHotelRoom', 'bnbTotalHotelProfit', 'bnbTotalFashionProfit', 'bnbTotalFashionCommission', 'totalMerchantFashion', 'totalTourProfit', 'totalTourCommission', 'totalHotelProfit', 'totalHotelCommission', 'totalpackageNumber', 'totalFashionCommission', 'totalFashionProfit', 'totalHotelRoom', 'touristOderList', 'roomOrderList', 'totalMerchantHotel', 'totalMerchantTour', 'totalProduct', 'totalOrder', 'totalDelivered', 'totalPending', 'todayOrder', 'totalConfirmed', 'totalCancelled', 'totalRefund', 'totalCommission', 'productOrderList'));
+            return view('welcome', compact('bnbTodayOrder', 'bnbproductOrderList', 'bnbTouristOderList', 'bnbRoomOrderList',
+             'bnbTotalProduct', 'bnbTotalTourCommission', 'bnbTotalTourProfit', 'bnbTotalpackageNumber',
+             'bnbTotalHotelCommission', 'bnbTotalHotelRoom', 'bnbTotalHotelProfit', 'bnbTotalFashionProfit',
+             'bnbTotalFashionCommission', 'totalMerchantFashion', 'totalTourProfit', 'totalTourCommission',
+             'totalHotelProfit', 'totalHotelCommission', 'totalpackageNumber', 'totalFashionCommission',
+              'totalFashionProfit', 'totalHotelRoom', 'touristOderList', 'roomOrderList', 'totalMerchantHotel',
+              'totalMerchantTour', 'totalProduct', 'totalOrder', 'totalDelivered', 'totalPending', 'todayOrder',
+              'totalConfirmed', 'totalCancelled', 'totalRefund', 'totalCommission', 'productOrderList'));
         }
         else{
             Session::flash('error', 'Sorry access denied!');
@@ -82,9 +90,6 @@ class HomeController extends Controller
         }
     }
 
-    /**
-     * @return string
-     */
     public function homepage(){
         //$slider = SliderModel::orderBy('id','DESC')->take(5)->get();
         $popularBrandsOne=MarchentRegModel::where('logo_indexing','=',1)
@@ -133,8 +138,11 @@ class HomeController extends Controller
         //$mainManu4=MainManuModel::where('status',1)->where('manu_indexing',4)->first();
         //$mainManu5=MainManuModel::where('status',1)->where('manu_indexing',5)->first();
         //$mainManu6=MainManuModel::where('status',1)->where('manu_indexing',6)->first();
-
-        return view('webhome',compact('slider','popularBrandsOne','popularBrandsTwo','popularBrandsThree','popularBrandsFour','popularBrandsFive','popularBrandsSix','popularBrandsSeven','popularBrandsEight','popularBrandsNine','popularBrandsTen','mainManu1','mainManu2','mainManu3','mainManu4','mainManu5','mainManu6'));
+      // $fashionproducts=Model\ProductAddModel::where('main_manu',2)->orderBy('id', 'DESC')->get();
+       //return $fashionproducts;
+        return view('webhome',compact('slider','popularBrandsOne','popularBrandsTwo','popularBrandsThree','popularBrandsFour',
+        'popularBrandsFive','popularBrandsSix','popularBrandsSeven','popularBrandsEight','popularBrandsNine',
+        'popularBrandsTen','mainManu1','mainManu2','mainManu3','mainManu4','mainManu5','mainManu6'));
     }
 
 public function login(){
