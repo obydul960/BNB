@@ -11,6 +11,7 @@ use App\Model\SliderModel;
 use App\Model\MarchentRegModel;
 use App\Model\AllUserModel;
 use App\Model\division;
+use App\Model\MainManuModel;
 use App\User;
 use Hash;
 use Session;
@@ -23,9 +24,12 @@ class WebController extends Controller{
 		return view('front_web.login');
 	}
     // home menu show
-    // public function topMenu(){
-    //     $manu1=MainManuModel::where()->get();
-    // }
+public function indexAjax(messageRequest $request){
+    $id=$request->id;
+    $category=MainManuModel::where('id',$id)->first();
+    $data=array('data'=>$category);
+    return $data;
+}
 
 	// normal user login system
 	public function userLogin(Request $request){

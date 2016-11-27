@@ -135,8 +135,9 @@ $(function() {
         closeOnClick:'false',
         prependTo:'.main-menu5'
     });
-    $('.slicknav_menu').prepend('<a href="index.html" class=""><img  src="Assets/image/mobile-citymail-logo.png""</a>');
+    $('.slicknav_menu').prepend('<a href="index.html" class=""><img  src="webassets/image/logo-n.png""</a>');
     //    $('.slicknav_menu').prepend('<a herf="" class=""><img src="Assets/image/mobile-citymail-logo.png""</a>');
+
     //    
     //         fashion
     var fashion=$(".owl-fashion").owlCarousel({
