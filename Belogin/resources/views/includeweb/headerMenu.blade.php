@@ -40,20 +40,26 @@
             </div>
             <div class="col-md-7 col-sm-9">
             <ul class="tabs secondary-menu hidden-xs" id="menu-list5">
-                <li class="tab col s2 menu-name1"><a  href="{{URL::to('/')}}" >Home</a></li>
+
+    <li class="tab col s2 menu-name1"><a  href="javascript:ajaxLoad('{{url('/')}}')" id="addNewInvoiceBtn">Home</a></li>
                  @if($m2=App\Model\MainManuModel::where('status',1)->where('manu_indexing',2)->first())
                  <li class="tab col s2 menu-name1">
-                <a  href="{{URL::to('/')}}/categorydetails/{{$m2->id}}/{{$m2->manu_name}}" target="_Self">{{$m2->manu_name}}</a>
-                </li>
+                <a  href="javascript:ajaxLoad('{{url('frontweb/fusion')}}')">{{$m2->manu_name}}</a>
+                 </li>
+                 <!-- <li class="tab col s2 menu-name1">
+                <a   href="javascript:ajaxLoad('{{url('details/categorydetails')}}')" target="_Self">{{$m2->manu_name}}</a>
+                </li> -->
                  @endif
                  @if($m3=App\Model\MainManuModel::where('status',1)->where('manu_indexing',3)->first())
-                <li class="tab col s2 menu-name1"><a href="{{URL::to('/')}}/categorydetails/{{$m3->id}}/{{$m3->manu_name}}" target="_Self">{{$m3->manu_name}}</a></li>
-                @endif
+  <li class="tab col s2 menu-name1"><a href="{{URL::to('/')}}/categorydetails/{{$m3->id}}/{{$m3->manu_name}}" id="test">{{$m3->manu_name}}</a></li>
+
+                  @endif
                 @if($m4=App\Model\MainManuModel::where('status',1)->where('manu_indexing',4)->first())
                 <li class="tab col s2 menu-name2"><a href="{{URL::to('/')}}/categorydetails/{{$m4->id}}/{{$m4->manu_name}}" target="_Self">{{$m4->manu_name}}</a></li>
                 @endif
                 @if($m5=App\Model\MainManuModel::where('status',1)->where('manu_indexing',5)->first())
                  <li class="tab col s2 menu-name3"><a href="{{URL::to('/')}}/categorydetails/{{$m4->id}}/{{$m4->manu_name}}" target="_Self">{{$m5->manu_name}}</a></li>
+
                  @endif
                  @if($m6=App\Model\MainManuModel::where('status',1)->where('manu_indexing',6)->first())
                  <li class="tab col s2"><a href="{{URL::to('/')}}/categorydetails/{{$m6->id}}/{{$m6->manu_name}}" target="_Self">{{$m6->manu_name}}</a></li>
@@ -62,6 +68,8 @@
 
 
             </div>
+            <!-- <div id="content">click any menu above to change content here</div>
+           <div class="loading"></div> -->
             <div class="col-md-1 col-sm-1 col-md-offest-1 mobile-header-cart">
                 <div class="h-cart-section " id="cart">
                     <a href="#" class="  gray h-cart-icon">
@@ -104,4 +112,5 @@
             </div> <!--end shopping-cart -->
         </div>
     </div>
+
 </section>

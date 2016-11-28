@@ -34,4 +34,19 @@
     <script src="{{URL::to('/')}}/webassets/js/sweetalert/sweetalert.min.js"></script>
         <!-- Toust Flash message -->
     <link href="{{URL::to('/')}}/webassets/css/toastr.min.css" rel="stylesheet">
+    <!-- <link href="{{URL::to('/')}}/webassets/ajaxMenu/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+    <style>
+    .loading {
+        background: lightgoldenrodyellow {{URL::to('/')}}/webassets/ajaxMenu/images/processing.gif no-repeat center 65%;
+        height: 80px;
+        width: 100px;
+        position: fixed;
+        border-radius: 4px;
+        left: 50%;
+        top: 50%;
+        margin: -40px 0 0 -50px;
+        z-index: 2000;
+        display: none;
+    }
+</style>
 </head>

@@ -14,14 +14,12 @@ Route::post('userReg','web\WebController@userRegistation');
 Route::get('merchantReg','web\WebController@merchantReg');
 Route::post('merchantReg','web\WebController@merchantRegistation');
 
-Route::get('ajax-subcat', function(){
+// ajax menu
+Route::controller('frontweb', 'web\AjaxMenuController');
+Route::get('aa', 'web\AjaxMenuController@categorydetails');
 
-  $cat_id = Input::get('cat_id');
 
-  $districts = App\Model\district::where('division_id', '=', $cat_id)->get();
 
-  return Response::json($districts);
-});
 
 Route::get('mainCategory', function(){
 
