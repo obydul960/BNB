@@ -39,22 +39,20 @@
                 <a href="index.html" ><img src="{{URL::to('/')}}/webassets/image/logo-n.png" class="img-responsive"></a>
             </div>
             <div class="col-md-7 col-sm-9">
-            <ul class="tabs secondary-menu hidden-xs" id="menu-list5">
+            <ul class=" ajaxLoadUrl tabs secondary-menu hidden-xs" id="menu-list5">
     <li class="tab col s2 menu-name1"><a  href="javascript:ajaxLoad('{{url('/')}}')" id="addNewInvoiceBtn">Home</a></li>
                  @if($m2=App\Model\MainManuModel::where('status',1)->where('manu_indexing',2)->first())
                  <li class="tab col s2 menu-name1">
-                <a  href="javascript:ajaxLoad('{{url('front_web/fusion')}}')" target="_Self">{{$m2->manu_name}}</a>
-                </li>
-                 <!-- <li class="tab col s2 menu-name1">
                 <a   href="javascript:ajaxLoad('{{url('details/categorydetails')}}')" target="_Self">{{$m2->manu_name}}</a>
-                </li> -->
+                </li>
                  @endif
                  @if($m3=App\Model\MainManuModel::where('status',1)->where('manu_indexing',3)->first())
-                  <li class="tab col s2 menu-name1"><a href="javascript:ajaxLoad('{{url('front_web/hotel')}}')" target="_Self">{{$m3->manu_name}}</a></li>
-               <!--  <li class="tab col s2 menu-name1"><a href="{{URL::to('/')}}/categorydetails/{{$m3->id}}/{{$m3->manu_name}}" target="_Self">{{$m3->manu_name}}</a></li> -->
+           <!--      <li class="tab col s2 menu-name1"><a href="{{URL::to('/')}}/categorydetails/{{$m3->id}}/{{$m3->manu_name}}" target="_Self">{{$m3->manu_name}}</a></li>  -->
+                <li class="tab col s2 menu-name1"><a href="{{URL::to('/')}}/hotel" target="_Self">{{$m3->manu_name}}</a></li> 
                 @endif
                 @if($m4=App\Model\MainManuModel::where('status',1)->where('manu_indexing',4)->first())
-                <li class="tab col s2 menu-name2"><a href="{{URL::to('/')}}/categorydetails/{{$m4->id}}/{{$m4->manu_name}}" target="_Self">{{$m4->manu_name}}</a></li>
+                <!-- <li class="tab col s2 menu-name2"><a href="{{URL::to('/')}}/categorydetails/{{$m4->id}}/{{$m4->manu_name}}" target="_Self">{{$m4->manu_name}}</a></li> -->
+                <li class="tab col s2 menu-name2"><a href="{{URL::to('/')}}/hotel2" target="_Self">{{$m4->manu_name}}</a></li>
                 @endif
                 @if($m5=App\Model\MainManuModel::where('status',1)->where('manu_indexing',5)->first())
                  <li class="tab col s2 menu-name3"><a href="{{URL::to('/')}}/categorydetails/{{$m4->id}}/{{$m4->manu_name}}" target="_Self">{{$m5->manu_name}}</a></li>

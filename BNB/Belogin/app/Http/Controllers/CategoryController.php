@@ -125,6 +125,8 @@ class CategoryController extends Controller
           }
     }
 
+
+
     // main manu status 1=show and 0= hidden by obydul date:29-10-16
     public function mainManuStatus(Request $request,$id){
         if(Auth::check()) {
@@ -177,7 +179,8 @@ class CategoryController extends Controller
     if(Auth::check()){
         if(Auth::user()->user==1){
             $mainCategoryShow = CategoryModel::orderBy('id', 'DESC')->get();
-            return view('backend.category.mainCategory',compact('mainCategoryShow'));
+            $mainManu = MainManuModel::get();
+            return view('backend.category.mainCategory',compact('mainCategoryShow','mainManu'));
         }else{
             Session::flash('error', 'Sorry access denied!');
             return redirect::to('home');
@@ -194,6 +197,7 @@ class CategoryController extends Controller
    public function mainCategoryStore(Request $request){
     if(Auth::check()){
         if(Auth::user()->user==1){
+          //dd($request->all());
             $validator = Validator::make($request->all(), [
                 'mainCategory' => 'required|min:2|max:100'
             ]);
@@ -209,6 +213,7 @@ class CategoryController extends Controller
                         return redirect::to('categoryManage');
                     } else {
                         $mainCategory = new CategoryModel();
+                        $mainCategory->manu_id = $request->get('mainManu');
                         $mainCategory->category_name = $request->get('mainCategory');
                         $mainCategory->save();
                         Session::flash('success', 'Main category successfully  store....');
@@ -275,17 +280,17 @@ class CategoryController extends Controller
           }
     }
     // Sub Category From by obydul date:16-10-16
-    public function subCategoryFrom()
-    {
+    public function subCategoryFrom(){
         if (Auth::check()) {
             if (Auth::user()->user == 1) {
+              $mainCategory=MainManuModel::lists('manu_name', 'id');
             $mainCategoryShow = DB::table('category')->orderBy('id', 'ASC')->get();
             $subCategoryShow = DB::table('sub_category')
                 ->join('category', 'sub_category.main_category', '=', 'category.id')
                 ->select('category.category_name', 'sub_category.id', 'sub_category.main_category', 'sub_category.sub_category_name')
                 ->orderBy('id', 'DESC')
                 ->get();
-            return view('backend.category.subCategory', compact('mainCategoryShow', 'subCategoryShow'));
+            return view('backend.category.subCategory', compact('mainCategory','mainCategoryShow', 'subCategoryShow'));
         }
         else{
             Session::flash('error', 'Sorry access denied!');
@@ -300,10 +305,12 @@ class CategoryController extends Controller
 
     //Sub Category add by obydul date:19-9-16
     public function subCategoryStore(Request $request){
+     // dd($request->all());
         if (Auth::check()) {
             if (Auth::user()->user == 1) {
             $validator = validator::make($request->all(), [
-                'mainCategoryId' => 'required',
+                'mainManuName' => 'required',
+                'mainCategory' => 'required',
                 'SubCategory' => 'required|min:2|max:100'
             ]);
             if ($validator->fails()) {
@@ -318,7 +325,8 @@ class CategoryController extends Controller
                         return redirect::to('subCategoryManage');
                     } else {
                         $subCategory = new SubCategoryModel();
-                        $subCategory->main_category = $request->get('mainCategoryId');
+                        $subCategory->main_manu = $request->get('mainManuName');
+                        $subCategory->main_category = $request->get('mainCategory');
                         $subCategory->sub_category_name = $request->get('SubCategory');
                         $subCategory->save();
                         Session::flash('success', 'Sub Category Successfully  Inserted....');

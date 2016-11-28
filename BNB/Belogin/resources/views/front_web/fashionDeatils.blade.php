@@ -1,0 +1,1 @@
+fashionDeatils.blade.php

@@ -68,6 +68,7 @@
                                 <span>Fashion </span>
                             </a>
                             <ul class="sub">
+                                <li><a href="{{URL::to('/')}}/maninManu">Main Manu</a></li>
                                 <li><a href="{{URL::to('/')}}/categoryManage">Category</a></li>
                                 <li><a href="{{URL::to('/')}}/subCategoryManage">Subcategory</a></li>
                                 <li><a href="{{URL::to('/')}}/productAdd">Add Product</a></li>

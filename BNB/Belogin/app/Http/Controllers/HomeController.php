@@ -127,14 +127,26 @@ class HomeController extends Controller
         ->where('status','=',1)
         ->where('popular_brand','=',1)
         ->first();
-        //$mainManu1=MainManuModel::where('status',1)->where('manu_indexing',1)->first();
-        //$mainManu2=MainManuModel::where('status',1)->where('manu_indexing',2)->first();
-        //$mainManu3=MainManuModel::where('status',1)->where('manu_indexing',3)->first();
-        //$mainManu4=MainManuModel::where('status',1)->where('manu_indexing',4)->first();
-        //$mainManu5=MainManuModel::where('status',1)->where('manu_indexing',5)->first();
-        //$mainManu6=MainManuModel::where('status',1)->where('manu_indexing',6)->first();
-
-        return view('webhome',compact('slider','popularBrandsOne','popularBrandsTwo','popularBrandsThree','popularBrandsFour','popularBrandsFive','popularBrandsSix','popularBrandsSeven','popularBrandsEight','popularBrandsNine','popularBrandsTen','mainManu1','mainManu2','mainManu3','mainManu4','mainManu5','mainManu6'));
+        $fashion=DB::table('product_add')
+            ->join('product_image', 'product_add.product_id', '=', 'product_image.product_id')
+            ->where('product_add.main_manu',2)
+            ->select('product_add.*', 'product_image.*')
+            ->get();
+        $household=DB::table('product_add')
+            ->join('product_image', 'product_add.product_id', '=', 'product_image.product_id')
+            ->where('product_add.main_manu',6)
+            ->select('product_add.*', 'product_image.*')
+            ->get(); 
+        $decorateor=DB::table('product_add')
+            ->join('product_image', 'product_add.product_id', '=', 'product_image.product_id')
+            ->where('product_add.main_manu',5)
+            ->select('product_add.*', 'product_image.*')
+            ->get(); 
+        $hotel=DB::table('hotel_manage')
+            ->join('hotel_image', 'hotel_manage.room_id', '=', 'hotel_image.room_id')
+            ->select('hotel_manage.*', 'hotel_image.*')
+            ->get();           
+        return view('webhome',compact('slider','popularBrandsOne','popularBrandsTwo','popularBrandsThree','popularBrandsFour','popularBrandsFive','popularBrandsSix','popularBrandsSeven','popularBrandsEight','popularBrandsNine','popularBrandsTen','fashion','household','decorateor','hotel'));
     }
 
 public function login(){

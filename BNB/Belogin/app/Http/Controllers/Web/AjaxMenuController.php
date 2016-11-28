@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class AjaxMenuController extends Controller{
     public function categorydetails()
     {
-        return view('front_web.index');
+        return view('front_web.fusion');
     }
 
     public function getView1()

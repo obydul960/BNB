@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Model\Hotel\AddRomeModel;
 use App\Model\Hotel\HotelImageModel;
 use App\Model\MarchentRegModel;
+use App\Model\division;
 use Session;
 use DB;
 use Input;
@@ -25,8 +26,10 @@ class AddRomeController extends Controller
     public function addRomeFrom(){
         if(Auth::check()) {
             if(Auth::user()->user==1) {
-                $hotelListShow = MarchentRegModel::where('user_type', '3')->get();
-                return view('backend.Hotel.addRome', compact('hotelListShow'));
+                $division = division::lists('name', 'id');
+                $hotelList =MarchentRegModel::where('user_type', '3')->get();
+                //dd($division);
+                return view('backend.Hotel.addRome', compact('division','hotelList'));
             }
             else{
                 Session::flash('error', 'Sorry access denied!');
@@ -44,9 +47,11 @@ class AddRomeController extends Controller
         if(Auth::check()) {
             if (Auth::user()->user == 1 || Auth::user()->user == 3 ) {
                 $validator = Validator::make($request->all(), [
-                    'areaName' => 'required',
-                    'locationName' => 'required',
                     'hotelName' => 'required',
+                    'division' => 'required',
+                    'district' => 'required',
+                    'thana' => 'required',
+                    'stateAddress' => 'required',
                     'title' => 'required',
                     'roomNumber' => 'required',
                     'price' => 'required',
@@ -59,16 +64,20 @@ class AddRomeController extends Controller
                 } else {
                     $romeId = uniqid();
                     $addRome = new AddRomeModel();
+
                     $addRome->room_id = $romeId;
                     $addRome->date = date("d-m-Y");
-                    $addRome->area = $request->get('areaName');
-                    $addRome->location = $request->get('locationName');
+                    $addRome->divistion =$request->get('division');
+                    $addRome->district = $request->get('district');
+                    $addRome->thana = $request->get('thana');
+                    $addRome->marchent_id =Auth::user()->user_id;
                     $addRome->hotel_name = $request->get('hotelName');
+                    $addRome->state_address = $request->get('stateAddress');
                     $addRome->title = $request->get('title');
                     $addRome->room_number = $request->get('roomNumber');
-                    $addRome->discription = $request->get('discrioption');
                     $addRome->price = $request->get('price');
                     $addRome->commission = $request->get('commission');
+                    $addRome->discription = $request->get('discrioption');
                     $addRome->save();
                     Session::flash('success', 'Successfully Image Uploaded.');
                     return redirect::to('manageRoom');

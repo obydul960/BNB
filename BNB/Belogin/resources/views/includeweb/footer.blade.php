@@ -64,25 +64,18 @@
 
 <script type="text/javascript" src="{{URL::to('/')}}/webassets/ajaxMenu/bootstrap.min.js"></script>
 <script type="text/javascript" src="{{URL::to('/')}}/webassets/ajaxMenu/bootstrap.min.js"></script>
-<script>
-    function ajaxLoad(filename, content) {
-        content = typeof content !== 'undefined' ? content : 'content';
-        $('.loading').show();
-        $.ajax({
-            type: "GET",
-            url: filename,
-            contentType: false,
-            success: function (data) {
-                $("#" + content).html(data);
-                $('.loading').hide();
-            },
-            error: function (xhr, status, error) {
-                alert(xhr.responseText);
-            }
-        });
-    }
-</script>
 
+<!-- Ajax page loding no refresh page -->
+<!--  <script>
+ $(".ajaxLoadUrl a").on('click',function(e) {
+ var href = $(this).attr('href');
+//alert(href);
+if(href != undefined) {
+    e.preventDefault();
+            $("#ajaxPageContent").load($(this).attr('href'));
+    }   
+});
+</script> -->
 
 <script type="text/javascript">
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -93,7 +86,8 @@
     ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 </script>
 
-<!-- Flash message -->
+<!-- Flash message show -->
+
 @if(Session::has('success'))
 <script type="text/javascript">
     setTimeout(function() {

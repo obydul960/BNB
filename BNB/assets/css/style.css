@@ -26,18 +26,7 @@ ul li {
     /*list-style:none;*/
 }
 /* costomise style by obydul*/
-input.form-control{
-    font-weight: bold;
-    color: black;
-}
- .form{
-    color:black;
-    font-weight: bold;
-}
-#selectText{
-    color:black;
-    font-weight: bold;
-}
+
 
 
 a,a:hover,a:focus {

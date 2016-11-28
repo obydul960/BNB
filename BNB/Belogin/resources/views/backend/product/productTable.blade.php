@@ -4,8 +4,8 @@
 @if(Auth::check())
 @if(Auth::user()->user==1 || Auth::user()->user==2)
 <!-- multiplse image upload -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.js"></script>
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.js"></script> -->
 
 
 <!-- Data Table Data show -->
@@ -30,6 +30,8 @@ Add New Product
 <th>Name</th>
 <th>Code</th>
 <th>Price</th>
+<th>Selling Price</th>
+<th>BNB Commission</th>
 <th>Quentity</th>
 <th>Actions</th>
 </tr>
@@ -42,6 +44,8 @@ Add New Product
 <td>{{$product->product_name}}</td>
 <td>{{$product->code_no}}</td>
 <td>{{$product->buying_price}}</td>
+<td>{{$product->selling_price}}</td>
+<td>{{$product->bnb_commission}}</td>
 <td>{{$product->quantity}}</td>
 <td>
 <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#multiple-image{{$product->id}}" value="{{$product->id}}"><input type="hidden" name="multipaleImage">Upload Image</button>
@@ -59,6 +63,8 @@ Add New Product
 <td>{{$product->product_name}}</td>
 <td>{{$product->code_no}}</td>
 <td>{{$product->buying_price}}</td>
+<td>{{$product->selling_price}}</td>
+<td>{{$product->bnb_commission}}</td>
 <td>{{$product->quantity}}</td>
 <td>
 <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#multiple-image{{$product->id}}" value="{{$product->id}}"><input type="hidden" name="multipaleImage">Upload Image</button>
@@ -99,7 +105,7 @@ Add New Product
 <div>
 <input type="hidden" name="productIdImage" value="{{$product->product_id}}">
 <div class="form-group ">
-<label for="productName" class="control-label col-lg-4">Category Image</label>
+<label for="productName" class="control-label col-lg-4">Category Image<span style="color: red">(*)</span></label>
 <div class="col-lg-4">
 <input type="file" name="homeImage" class="form-control" id="product_name"/>
 </div>
@@ -114,7 +120,7 @@ Add New Product
 </div><br/>
 </div><br/>
 <div class="form-group ">
-<label for="productName" class="control-label col-lg-4">Details Image 1</label>
+<label for="productName" class="control-label col-lg-4">Details Image 1<span style="color: red">(*)</span></label>
 <div class="col-lg-4">
 <input type="file" name="detailsOne" class="form-control" id="product_name"/>
 </div>
@@ -239,7 +245,7 @@ Modal title
 <div class="modal-body">
 {!! Form::open(['url'=>'productAdd','class'=>'cmxform form-horizontal','id'=>'signupForm','method'=>'post','enctype' => 'multipart/form-data','files'=>true])!!}
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Main manu </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Main manu </label>
 <div class="col-lg-6">
 <select name="mainManu" class="form-control" id="mainManu">
 <option>--Select main manu--</option>
@@ -250,7 +256,7 @@ Modal title
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Main Category </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Main Category </label>
 <div class="col-lg-6">
 <select name="main_category" class="form-control" id="mainCat">
 <option>--Select main category--</option>
@@ -258,7 +264,7 @@ Modal title
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Sub Category </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Sub Category </label>
 <div class="col-lg-6">
 <select name="sub_category" class="form-control" id="subcat">
 <option value="">--Select sub category--</option>
@@ -266,71 +272,71 @@ Modal title
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Product </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Product </label>
 <div class="col-lg-6">
 <input type="text" name="productName" class="form-control"
 id="productName" placeholder="product name"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Code Number</label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Code</label>
 <div class="col-lg-6">
 <input type="text" name="codeNumber" class="form-control"
 id="codeNumber" placeholder="product code number"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Quantity</label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Quantity</label>
 <div class="col-lg-6">
 <input type="text" name="productQuentity" class="form-control"
 id="productQuentity" placeholder="product Quantity"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">buying price </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">price </label>
 <div class="col-lg-6">
 <input type="text" name="buying_price" class="form-control buying_price"
 id="buying_price" placeholder="buying price" onblur="buyingPrice(this);" onkeyup="sellingPrice();"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Discount </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Discount </label>
 <div class="col-lg-6">
 <input type="text" name="discount" class="form-control discount"
 id="discount" placeholder="Discount" onblur="productDissount(this);" onkeyup="sellingPrice();"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Selling Price </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Selling Price </label>
 <div class="col-lg-6">
 <input type="text" readonly name="selling_price" class="form-control totalSellingPrice"
 placeholder="Selling price" onkeyup="totalSellingPrice();"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Commission </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Commission </label>
 <div class="col-lg-6">
 <input type="text" name="commission" class="form-control commission"
 id="commission" placeholder="Commission" onblur="commission(this);" onkeyup="bnbGiveCommission();"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">BNB Commission </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">BNB Commission </label>
 <div class="col-lg-6">
 <input type="text" readonly name="bnbCommission" class="form-control totalCommission"
 placeholder="BNB commission" onkeyup="totalCommission();"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Supplier Name </label>
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Supplier Name </label>
 <div class="col-lg-6">
 <input type="text" name="supplier_name" class="form-control"
 id="supplier_name" placeholder="supplier name"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Details </label>
-<div class="col-lg-6">
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Details </label>
+<div class="col-lg-7">
 <textarea class="form-control ckeditor" id="product_details" name="product_details" rows="6"></textarea>
 </div>
 </div>
@@ -614,8 +620,8 @@ id="supplier_name" placeholder="supplier name"/>
 </div>
 </div>
 <div class="form-group ">
-<label for="firstname" class="control-label col-lg-3">Details </label>
-<div class="col-lg-6">
+<label for="firstname" class="control-label col-lg-3" style="font-weight: bold;">Details </label>
+<div class="col-lg-7">
 <textarea class="form-control ckeditor" id="product_details" name="product_details" rows="6">{!! $product->product_details !!}</textarea>
 </div>
 </div>
