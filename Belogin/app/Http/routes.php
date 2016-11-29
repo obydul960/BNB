@@ -15,10 +15,9 @@ Route::get('merchantReg','web\WebController@merchantReg');
 Route::post('merchantReg','web\WebController@merchantRegistation');
 
 // ajax menu
-Route::controller('frontweb', 'web\AjaxMenuController');
-Route::get('aa', 'web\AjaxMenuController@categorydetails');
 
-
+Route::get('hotel', 'web\AjaxMenuController@categorydetails');
+Route::get('hotel2', 'web\AjaxMenuController@getView1');
 
 
 Route::get('mainCategory', function(){
@@ -39,6 +38,19 @@ Route::get('subcatergory', function(){
   return Response::json($districts);
 });
 
+
+// show division wishe district
+Route::get('division', function(){
+  $cat_id = Input::get('cat_id');
+  $states = App\Model\district::where('division_id', '=', $cat_id)->get();
+  return Response::json($states);
+});
+// show district wishe thana
+Route::get('thanaShow', function(){
+  $cat_id = Input::get('cat_id');
+  $thana = App\Model\thana::where('district_id', '=', $cat_id)->get();
+  return Response::json($thana);
+});
 
 
 
@@ -225,11 +237,18 @@ Route::get('api/dropdown/mainCategory', function(){
     //  dd($items);
     return Response::make($items);
 });
+
+
 //sub category add
 Route::get('api/dropdown/subcategory', function(){
     $users=Input::get('option');
 //Belogin
-    $items2 = App\Model\SubCategoryModel::where('main_category','=',$users)->lists('sub_category_name','id');
+    $items2 = App\Model\CategoryModel::where('manu_id','=',$users)->lists('category_name','id');
     //  dd($items);
     return Response::make($items2);
 });
+
+//manage shoping add to card...
+Route::get('add/to/cart/{pid}/{pname}/{qty}/{price}','web\WebController@addtocart');
+Route::get('my/shopping/cart','web\WebController@getmycart'); 
+Route::get('cart/remove/{rid}','web\WebController@deleteCart');

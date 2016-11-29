@@ -251,7 +251,7 @@
                                             <input type="hidden" name="roomId" value="{{$value->room_id}}">
                                             <div class="form-group">
                                                 <div class="col-md-4" style="margin-right: 15px;margin-left: 15px">
-                                                    <span>Image Upload One(required)</span>
+                                                    <span>Image Upload One<span style="color: red">(*)</span></span>
                                                     <div class="fileupload fileupload-new" data-provides="fileupload">
                                                         <div class="fileupload-new thumbnail" style="width: 150px; height: 150px;">
                                                             @foreach($productImage=App\Model\Hotel\HotelImageModel::where('room_id','=',$value->room_id)->get() as $packageImageShow)
@@ -274,7 +274,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4" style="margin-right: 15px;margin-left: 15px">
-                                                    <span>Image Upload Two (required)</span>
+                                                    <span>Image Upload Two <span style="color: red">(*)</span></span>
                                                     <div class="fileupload fileupload-new" data-provides="fileupload">
                                                         <div class="fileupload-new thumbnail" style="width: 150px; height: 150px;">
                                                             @foreach($productImage=App\Model\Hotel\HotelImageModel::where('room_id','=',$value->room_id)->get() as $packageImageShow)

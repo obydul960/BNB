@@ -19,13 +19,21 @@
                             <div class=" form">
                                 {!! Form::open(['url' => 'subCategoryManage','class'=>'cmxform form-horizontal','id'=>'signupForm' ]) !!}
                                 <div class="form-group ">
+                                    <label for="firstname" class="control-label col-lg-3">Main Manu</label>
+                                    <div class="col-lg-6">
+                                        <select name="mainManuName" class="form-control input-sm m-bot15" id="mainManu">
+                                            <option value="0">Some Select</option>
+                                            @foreach($mainCategory as $k=>$v)
+                                                <option value="{{$k}}">{{$v}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
                                     <label for="firstname" class="control-label col-lg-3">Main Category</label>
                                     <div class="col-lg-6">
-                                        <select name="mainCategoryId" class="form-control input-sm m-bot15" id="selectText">
-                                            <option value="0">Some Select</option>
-                                            @foreach($mainCategoryShow as $value)
-                                                <option value="{{ $value->id}}">{{ $value->category_name }}</option>
-                                            @endforeach
+                                        <select name="mainCategory" class="form-control input-sm m-bot15" id="mainCat">
+                                            <option value="">Some Select</option>
                                         </select>
                                     </div>
                                 </div>
@@ -131,6 +139,25 @@
                                 });
                     });
                 }
+            </script>
+            <!-- category show -->
+                        <script>
+                jQuery(document).ready(function($){
+                    n=1;
+                    $('#mainManu').change(function(){
+                        $.get("{{ url('api/dropdown/subcategory')}}",
+
+                                { option: $(this).val() },
+                                function(data) {
+                                    var model = $('#mainCat');
+                                    model.empty();
+                                    model.append("<option value=''>" + 'Select Category' + "</option>");
+                                    $.each(data, function(index,element) {
+                                        model.append("<option value='"+ index +"'>" + element + "</option>");
+                                    });
+                                });
+                    });
+                });
             </script>
 
         @else

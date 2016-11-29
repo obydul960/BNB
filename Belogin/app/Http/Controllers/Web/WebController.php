@@ -20,6 +20,7 @@ use Session;
 use Auth;
 use Input;
 use DB;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class WebController extends Controller{
 	// show normal user login form.
@@ -235,4 +236,31 @@ public function merchantRegistation(Request $request){
 
 
     // End class
+
+		///add to card manage
+    public function addtocart($pid,$pname,$qty,$price)
+    {
+       //return $pid;
+         $pc = ProductAddModel::where('product_id','=',$pid)->first()->quantity;
+				     if($pc > 0){
+            Cart::add($pid, $pname, $qty, $price);
+            Session::flash('success','Product was Added To Cart Successfully.');
+            return redirect()->back();
+        }
+        else{
+            Session::flash('error','Sorry. Product is Currently Not Available.');
+            return redirect()->back();
+        }
+    }
+
+    public function getmycart(){
+
+        return view('cart',['data'=>Cart::content()]);
+
+    }
+  public function deleteCart($rowId){
+        Cart::remove($rowId);
+        Session::flash('success','The Item was Removed from the Cart Successfully.');
+        return redirect()->back();
+    }
 }

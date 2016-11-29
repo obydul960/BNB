@@ -58,12 +58,13 @@
                                 <table  class="display table table-bordered table-striped" id="dynamic-table">
                                     <thead>
                                     <tr>
-                                        <th>Touriest Name</th>
-                                        <th>Title</th>
-                                        <th>Status</th>
-                                        <th>Availability</th>
-                                        <th>Book</th>
-                                        <th>Action</th>
+                        
+<th>Title</th>
+<td>Date</td>
+<th>Status</th>
+<th>Availability</th>
+<th>Book</th>
+<th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -71,8 +72,8 @@
                                         <!-- Only show data tour merchant wish-->
                                         @foreach($packageList as $value)
                                             <tr class="gradeX">
-                                                <td>{{ $value->turist_name }}</td>
                                                 <td>{{ $value->title }}</td>
+                                                <td>Data</td>
                                                 <td>
                                                     @if(Auth::user()->user==1)
                                                         {!!Form::open(['url'=>['packageStatus',$value->id],'class'=>'form-horizontal'])!!}
@@ -125,8 +126,8 @@
                                         @foreach($bnbpackageList as $value)
                                             <!-- Show all data supper admin login-->
                                             <tr class="gradeX">
-                                                <td>{{ $value->turist_name }}</td>
                                                 <td>{{ $value->title }}</td>
+                                                <td>Date</td>
                                                 <td>
                                                     @if(Auth::user()->user==1)
                                                         {!!Form::open(['url'=>['packageStatus',$value->id],'class'=>'form-horizontal'])!!}
@@ -206,7 +207,7 @@
                                         <input type="hidden" name="packageID" value="{{$value->package_id}}">
                                         <div class="form-group">
                                             <div class="col-md-4" style="margin-right: 15px;margin-left: 15px">
-                                                <span>Image Upload One</span>
+                                                <span>Image Upload One<span style="color:red">(*)</span></span>
                                                 <div class="fileupload fileupload-new" data-provides="fileupload">
                                                     <div class="fileupload-new thumbnail" style="width: 150px; height: 150px;">
                                                         @foreach($productImage=App\Model\Tourist\PackageImageModel::where('package_id','=',$value->package_id)->get() as $packageImageShow)
@@ -229,7 +230,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <span>Image Upload Two</span>
+                                                <span>Image Upload Two<span style="color:red">(*)</span></span>
                                                 <div class="fileupload fileupload-new" data-provides="fileupload">
                                                     <div class="fileupload-new thumbnail" style="width: 150px; height: 150px;">
                                                         @foreach($productImage=App\Model\Tourist\PackageImageModel::where('package_id','=',$value->package_id)->get() as $packageImageShow)

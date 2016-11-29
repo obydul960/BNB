@@ -9,9 +9,10 @@
     <!--main content start-->
 
             <!-- page start-->
+        <div id="ajaxPageContent">
 
            @yield('content')
-
+        </div>
             <!-- page end-->
 
     <!--main content end-->

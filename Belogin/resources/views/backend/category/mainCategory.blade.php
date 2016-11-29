@@ -17,6 +17,17 @@
                         <div class="panel-body">
                             <div class=" form">
                                 {!! Form::open(['url' => 'categoryManage','class'=>'cmxform form-horizontal','id'=>'signupForm' ]) !!}
+                                 <div class="form-group ">
+                                    <label for="cname" class="control-label col-lg-4">Main Manu</label>
+                                    <div class="col-lg-5">
+                                        <select name="mainManu" class="form-control input-sm m-bot15" id="selectText">
+                                            <option value="0">Some Select</option>
+                                            @foreach($mainManu as $value)
+                                                <option value="{{ $value->id}}">{{ $value->manu_name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="form-group ">
                                     <label for="cname" class="control-label col-lg-4">Main Category</label>
                                     <div class="col-lg-5">
