@@ -51,11 +51,14 @@ class AddPackageController extends Controller
                     Session::flash('error', 'something wrong..!');
                     return redirect::to("addPackage");
                 } else {
+                  //  return  $request->get('facilities');
                     $packageID = uniqid();
                     $addPackage = new TouristManageModel();
+                    $addPackage->marchent_id = Auth::user()->user_id; 
                     $addPackage->package_id = $packageID;
                     $addPackage->title = $request->get('title');
                     $addPackage->price = $request->get('price');
+                    $addPackage->package_name =$request->get('packageName');
                     $addPackage->commission = $request->get('commission');
                     $addPackage->start_date = $request->get('startDate');
                     $addPackage->end_date = $request->get('EndDate');

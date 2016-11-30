@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Model\SliderModel;
 use App\Model\MarchentRegModel;
 use App\Model\AllUserModel;
-use App\Model\division;
+use App\Model\district;
 use App\Model\MainManuModel;
 use App\User;
 use Hash;
@@ -159,7 +159,9 @@ public function userProfielUpdate(Request $request,$user_id){
 
 // merchant reg form
 public function merchantReg(){
-  return view('front_web.merchantReg');  
+    $district=district::get();
+    //dd($division);
+  return view('front_web.merchantReg',compact('district'));  
 }
 
 // merchant registation system

@@ -14,10 +14,16 @@ Route::post('userReg','web\WebController@userRegistation');
 Route::get('merchantReg','web\WebController@merchantReg');
 Route::post('merchantReg','web\WebController@merchantRegistation');
 
-// ajax menu
-Route::get('hotel', 'web\AjaxMenuController@categorydetails');
-Route::get('hotel2', 'web\AjaxMenuController@getView1');
 
+
+// fontend web fushaion show
+Route::get('fushaion/{manid}','web\AjaxMenuController@fushaionShow');
+Route::get('details/{product_id}','web\AjaxMenuController@fushaionDetails');
+// company profile
+Route::get('companyProfile/{manid}','web\AjaxMenuController@companyProfile');
+// fontend web hotel category show
+Route::get('hoelCategory','web\AjaxMenuController@hotelCategory');
+Route::get('hotelProfile/{room_id}','web\AjaxMenuController@hotelcategoryProfile');
 
 
 Route::get('mainCategory', function(){
@@ -43,6 +49,7 @@ Route::get('subcatergory', function(){
 Route::get('division', function(){
   $cat_id = Input::get('cat_id');
   $states = App\Model\district::where('division_id', '=', $cat_id)->get();
+
   return Response::json($states);
 });
 // show district wishe thana

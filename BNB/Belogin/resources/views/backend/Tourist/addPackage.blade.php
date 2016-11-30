@@ -18,6 +18,12 @@
                             <div class="form">
                                 {!! Form::open(['url'=>'addPackageStore','class'=>'cmxform form-horizontal','id'=>'signupForm','method'=>'post','enctype' => 'multipart/form-data','files'=>true])!!}
                                 <div class="form-group ">
+                                    <label for="firstname" class="control-label col-lg-3">Package Name</label>
+                                    <div class="col-lg-6">
+                                        <input class="form-control" id="packageName" name="packageName" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group ">
                                     <label for="firstname" class="control-label col-lg-3">Title</label>
                                     <div class="col-lg-6">
                                         <input class="form-control" id="title" name="title" type="text" />
@@ -38,7 +44,7 @@
                                 <div class="form-group">
                                     <label for="firstname" class="control-label col-lg-3">Start Date</label>
                                     <div class="col-lg-3">
-                                        <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2012"  class="input-append date dpYears">
+                                        <div data-date-viewmode="years" data-date-format="dd/mm/yyyy" data-date="<?php date("dd-mm-yyyy")?>"  class="input-append date dpYears">
                                             <input type="text" readonly="" size="16" name="startDate" class="form-control" id="startDate" placeholder="Select Start Date">
                                             <span class="input-group-btn add-on">
                                 <button class="btn btn-primary" type="button"><i class="fa fa-calendar"></i></button>
@@ -49,7 +55,7 @@
                                 <div class="form-group">
                                     <label for="firstname" class="control-label col-lg-3">End Date</label>
                                     <div class="col-lg-3">
-                                        <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2012"  class="input-append date dpYears">
+                                        <div data-date-viewmode="years" data-date-format="dd/mm/yyyy" data-date="<?php date("dd-mm-yyyy")?>"  class="input-append date dpYears">
                                             <input type="text" readonly="" size="16" name="EndDate" class="form-control" id="EndDate" placeholder="Select End Date">
                                             <span class="input-group-btn add-on">
                                 <button class="btn btn-primary" type="button"><i class="fa fa-calendar"></i></button>

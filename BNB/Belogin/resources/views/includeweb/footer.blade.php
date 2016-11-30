@@ -59,14 +59,9 @@
 <script type="text/javascript" src="{{URL::to('/')}}/webassets/js/main.js"></script>
 <!-- Tuest Flash message show -->
 <script type="text/javascript" src="{{URL::to('/')}}/webassets/js/toastr/toastr.min.js"></script>
-
-
-
-<script type="text/javascript" src="{{URL::to('/')}}/webassets/ajaxMenu/bootstrap.min.js"></script>
-<script type="text/javascript" src="{{URL::to('/')}}/webassets/ajaxMenu/bootstrap.min.js"></script>
-
+ 
 <!-- Ajax page loding no refresh page -->
-<!--  <script>
+ <script>
  $(".ajaxLoadUrl a").on('click',function(e) {
  var href = $(this).attr('href');
 //alert(href);
@@ -75,7 +70,7 @@ if(href != undefined) {
             $("#ajaxPageContent").load($(this).attr('href'));
     }   
 });
-</script> -->
+</script>
 
 <script type="text/javascript">
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -147,4 +142,33 @@ if(href != undefined) {
 
 <!-- Flsash message end -- >
 
-        
+<!-- Division district and thena show  -->
+<script type="text/javascript">
+$('#mdivision').on('change',function(e){       //state change
+        console.log(e);
+         var cat_id = e.target.value;
+        $.get('division?cat_id=' + cat_id, function(data){
+
+              $('#mdistrict').empty();
+
+            $.each(data, function(edit, subcatObj){  
+$('#mdistrict').append('<option value="'+subcatObj.id+'">'+subcatObj.name+'</option>');
+
+            });
+        });
+
+    });
+  $('#mdistrict').on('change',function(e){         //distric change
+        console.log(e);
+         var cat_id = e.target.value;
+
+        $.get('thanaShow?cat_id=' + cat_id, function(data){
+              $('#mthana').empty();
+            $.each(data, function(edit, subcatObj){
+                $('#mthana').append('<option value="'+subcatObj.name+'">'+subcatObj.name+'</option>');
+            });
+        });
+
+    });
+
+</script>     

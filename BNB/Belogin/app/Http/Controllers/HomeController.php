@@ -145,9 +145,15 @@ class HomeController extends Controller
         $hotel=DB::table('hotel_manage')
             ->join('hotel_image', 'hotel_manage.room_id', '=', 'hotel_image.room_id')
             ->select('hotel_manage.*', 'hotel_image.*')
-            ->get();           
-        return view('webhome',compact('slider','popularBrandsOne','popularBrandsTwo','popularBrandsThree','popularBrandsFour','popularBrandsFive','popularBrandsSix','popularBrandsSeven','popularBrandsEight','popularBrandsNine','popularBrandsTen','fashion','household','decorateor','hotel'));
+            ->get(); 
+        $tourist=DB::table('turiest_manage')
+            ->join('package_image', 'turiest_manage.package_id', '=', 'package_image.package_id')
+            ->select('turiest_manage.*', 'package_image.*')
+            ->get();               
+        return view('webhome',compact('slider','popularBrandsOne','popularBrandsTwo','popularBrandsThree','popularBrandsFour','popularBrandsFive','popularBrandsSix','popularBrandsSeven','popularBrandsEight','popularBrandsNine','popularBrandsTen','fashion','household','decorateor','hotel','tourist'));
     }
+
+
 
 public function login(){
    return view('front_web.login');

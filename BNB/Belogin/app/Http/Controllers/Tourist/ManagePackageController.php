@@ -20,7 +20,7 @@ class ManagePackageController extends Controller
     public function managePackage(){
         if(Auth::check()) {
             if (Auth::user()->user == 1 ||Auth::user()->user == 4 ) {
-                $packageList = TouristManageModel::where('marchent_id', '=', Auth::user()->user_id)->orderBy('id', 'DESC')->get();
+                //$packageList = TouristManageModel::where('marchent_id', '=', Auth::user()->user_id)->orderBy('id', 'DESC')->get();
                 $bnbpackageList = TouristManageModel::orderBy('id', 'DESC')->get();
                 return view('backend.Tourist.managePackage', compact('packageList', 'bnbpackageList'));
             }

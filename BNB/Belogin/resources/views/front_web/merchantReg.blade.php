@@ -17,13 +17,11 @@
                                         <label  class=""  for="last_name">Company Name</label>
                                     </div>
                                     <div class="input-field col s12">
-                                        <select name="cityName">
-                                            <option value="" disabled selected>Choose your City</option>
-                                            <option value="1">Dhaka</option>
-                                            <option value="2">Gazipur</option>
-                                            <option value="3">Feni</option>
-                                            <option value="4">Brishal</option>
-                                            <option value="4">khula</option>
+                                        <select name="district">
+                                            <option value="0" disabled selected>Choose your City</option>
+                                            @foreach($district as $value)
+                                            <option value="1">{{$value->name}}</option>
+                                            @endforeach
                                         </select>
                                         <!--<label></label>-->
                                     </div>
@@ -31,9 +29,10 @@
                                         <input  type="text" name="address" id="address">
                                         <label  class="" for="address">Company Address</label>
                                     </div>
+
                                     <div class="input-field col s12">
                                         <select multiple name="categoryName">
-                                            <option value="" disabled selected>Choose your Category</option>
+                                            <option value="" >Choose your Category</option>
                                             <option value="2">Fashion</option>
                                             <option value="3">Hotel</option>
                                             <option value="4">Tourism</option>
@@ -72,9 +71,14 @@
                                                 <span class="" style="text-transform:capitalize;"> Profile Photo</span>
                                                 <input type="file" name="profilePhoto" >
                                             </div>
-                                           <!--  <div class="file-path-wrapper">
-                                                <input class="file-path validate" type="text">
-                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <div class="file-field input-field">
+                                            <div class="btn yellow-co">
+                                                <span class="" style="text-transform:capitalize;"> Hotel Photo</span>
+                                                <input type="file" name="hotelPhoto" >
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="user_signup_bottom text-center" >
@@ -89,4 +93,5 @@
                 </div>
             </div>
         </section>
+
 @endsection

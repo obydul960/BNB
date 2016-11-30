@@ -14,51 +14,51 @@
                                </div>
                                <ul class="h-populer-band-list ">
                                    <li  class="demo-card-wide ">
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsOne->id}}"  id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsOne->company_logo}}" class="img-responsive lazy-image"></a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsOne->user_id}}"  id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsOne->company_logo}}" class="img-responsive lazy-image"></a>
 
                                    </li>
                              
                                    <li  class="demo-card-wide ">
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsTwo->id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsTwo->company_logo}}" class="img-responsive lazy-image"></a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsTwo->user_id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsTwo->company_logo}}" class="img-responsive lazy-image"></a>
                                    </li>
                                                                  
                                    <li  class="demo-card-wide ">
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsThree->id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsThree->company_logo}}" class="img-responsive lazy-image"></a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsThree->user_id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsThree->company_logo}}" class="img-responsive lazy-image"></a>
                                    </li>
                                                               
                                    <li  class="demo-card-wide " >
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsFour->id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsFour->company_logo}}" class="img-responsive lazy-image"> </a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsFour->user_id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsFour->company_logo}}" class="img-responsive lazy-image"> </a>
                                    </li>
                                                                
                                    <li  class="demo-card-wide  " >
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsFive->id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsFive->company_logo}}" class="img-responsive lazy-image"></a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsFive->user_id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsFive->company_logo}}" class="img-responsive lazy-image"></a>
                                    </li>
                                                                
                                    <li  class="demo-card-wide store-pop-right">
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsSix->id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsSix->company_logo}}" class="img-responsive lazy-image"></a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsSix->user_id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsSix->company_logo}}" class="img-responsive lazy-image"></a>
                                    </li>
                                                                  
                                    <li  class="demo-card-wide ">
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsSeven->id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsSeven->company_logo}}"></a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsSeven->user_id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsSeven->company_logo}}"></a>
                                    </li>
                                                                 
                                    <li  class="demo-card-wide " >
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsEight->id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsEight->company_logo}}" class="img-responsive lazy-image"></a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsEight->user_id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsEight->company_logo}}" class="img-responsive lazy-image"></a>
                                    </li>
                                                                 
                                    <li  class="demo-card-wide " >
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsNine->id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsNine->company_logo}}" class="img-responsive lazy-image"></a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsNine->user_id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsNine->company_logo}}" class="img-responsive lazy-image"></a>
                                    </li>
                                                                 
                                    <li  class="demo-card-wide  h-po-band-logo">
-                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsTen->id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsTen->company_logo}}" class="img-responsive lazy-image"></a>
+                                       <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsTen->user_id}}" id="bigimage"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsTen->company_logo}}" class="img-responsive lazy-image"></a>
                                    </li>
                                </ul>
                            </div>
                        </div>
                        <div class="col-md-3 col-sm-4 col-xs-12 gird-right">
                            <div class="h-add">
-                               <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsTwo->id}}"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsOne->company_logo}}" class="img-responsive lazy-image"></a>
+                               <a href="{{URL::to('/')}}/companyProfile/{{$popularBrandsTwo->user_id}}"><img src="{{URL::to('/')}}/Belogin/public/product_image/logo/{{$popularBrandsOne->company_logo}}" class="img-responsive lazy-image"></a>
                            </div>
                        </div>
                    </div>
@@ -130,17 +130,19 @@
                            </ul>
                        </div>
                        <div class="h-cata-show-fashion">
-                           <h3>Fashion</h3>
+                   @if($logo=App\Model\MainManuModel::where('status','=',1)->where('id',2)->first())
+                      <h3>{{$logo->manu_name}}</h3>
+                   @endif
                        </div>
                        <div class="cata-fashion-h ">
                            <div class="">
-                               <ul class="owl-fashion">
+                               <ul class="ajaxLoadUrl owl-fashion">
                                 @foreach($fashion as $product) 
                                    <li class="" style="">
                                        <div class="content-box single-product ">
                                            <div class="h-ca-fa-body  fashion-Tourism-home">
                                                <div class=" h-ca-product-image text-center">
-                                                   <a href="catagory_fashoion-details.html"><img src="{{URL::to('/')}}/Belogin/public/product_image/category_image/{{$product->home_Cat_image}}" class="img-responsive lazy-image" alt=""></a>
+                                                   <a href="{{ URL::to('/')}}/details/{{ $product->product_id }}"><img src="{{URL::to('/')}}/Belogin/public/product_image/category_image/{{$product->home_Cat_image}}" class="img-responsive lazy-image" alt=""></a>
                                                </div>
                                                <div class="brand-logo-cata text-center">
                                                @if($logo=App\Model\MarchentRegModel::where('user_id','=',$product->marchent_id)->first())
@@ -262,7 +264,9 @@
                            </ul>
                        </div>
                        <div class="h-cata-show-fashion">
-                           <h3>Household</h3>
+                        @if($logo=App\Model\MainManuModel::where('status','=',1)->where('id',6)->first())
+                        <h3>{{$logo->manu_name}}</h3>
+                        @endif
                        </div>
                        <div class="cata-fashion-h ">
                            <div class="">
@@ -272,7 +276,7 @@
                                        <div class="content-box single-product ">
                                            <div class="h-ca-fa-body  fashion-Tourism-home">
                                                <div class=" h-ca-product-image text-center">
-                                                   <a href="catagory_fashoion-details.html"><img src="{{URL::to('/')}}/Belogin/public/product_image/category_image/{{$house->home_Cat_image}}" class="img-responsive lazy-image" alt=""></a>
+                                                   <a href="{{ URL::to('/')}}/details/{{ $house->product_id }}"><img src="{{URL::to('/')}}/Belogin/public/product_image/category_image/{{$house->home_Cat_image}}" class="img-responsive lazy-image" alt=""></a>
                                                </div>
                                                <div class="brand-logo-cata text-center">
                                                @if($logo=App\Model\MarchentRegModel::where('user_id','=',$product->marchent_id)->first())
@@ -389,7 +393,9 @@
                            </ul>
                        </div>
                        <div class="h-cata-show-fashion">
-                           <h3>Decorator</h3>
+                       @if($logo=App\Model\MainManuModel::where('status','=',1)->where('id',5)->first())
+                        <h3>{{$logo->manu_name}}</h3>
+                        @endif
                        </div>
                        <div class="cata-fashion-h ">
                            <div class="">
@@ -399,7 +405,7 @@
                                        <div class="content-box single-product ">
                                            <div class="h-ca-fa-body  fashion-Tourism-home">
                                                <div class=" h-ca-product-image text-center">
-                                                   <a href="catagory_fashoion-details.html"><img src="{{URL::to('/')}}/Belogin/public/product_image/category_image/{{$decorate->home_Cat_image}}" class="img-responsive lazy-image" alt=""></a>
+                                                   <a href="{{ URL::to('/')}}/details/{{ $decorate->product_id }}"><img src="{{URL::to('/')}}/Belogin/public/product_image/category_image/{{$decorate->home_Cat_image}}" class="img-responsive lazy-image" alt=""></a>
                                                </div>
                                                <div class="brand-logo-cata text-center">
                                                @if($logo=App\Model\MarchentRegModel::where('user_id','=',$product->marchent_id)->first())
@@ -516,7 +522,9 @@
                                </ul>
                            </div>
                            <div class="h-cata-show-fashion">
-                               <h3>Hotel</h3>
+                       @if($logo=App\Model\MainManuModel::where('status','=',1)->where('id',3)->first())
+                        <h3>{{$logo->manu_name}}</h3>
+                        @endif
                            </div>
                            <div class="">
                                <ul class="owl-hotel">
@@ -623,31 +631,35 @@
                                </ul>
                            </div>
                            <div class="h-cata-show-fashion">
-                               <h3>Tourism</h3>
+                        @if($logo=App\Model\MainManuModel::where('status','=',1)->where('id',4)->first())
+                        <h3>{{$logo->manu_name}}</h3>
+                        @endif
                            </div>
                            <div class="">
                                <ul class="owl-tourism">
+                               @foreach($tourist as $turistValue)
                                    <li class="h-ca-hotel-section">
                                        <div class="content-box single-product ">
                                            <div class=" h-ca-fa-body-hotel ">
                                                <div class="col-md-5 gird-2 h-ca-product-image">
-                                                   <a href="catagory_fashoion-details.html"><img src="{{URL::to('/')}}/webassets/image/details/room-penthouse-380.jpg" class="img-responsive lazy-image" alt=""></a>
+                                                   <a href="catagory_fashoion-details.html"><img src="{{URL::to('/')}}/Belogin/public/touristImage/category/{{$turistValue->category_image}}" class="img-responsive lazy-image" alt=""></a>
                                                </div>
                                                <div class="col-md-7 gird-right">
                                                    <div class="tittle-description-ca-h">
-                                                       <a href="catagory_fashoion-details.html"><h3 class="product-name">New EID collection !!!</h3></a>
-                                                       <p class="product-details">Available in 3 different colors- lemon green, light blue & beige.</p>
+                                                       <a href="catagory_fashoion-details.html"><h3 class="product-name">{{$turistValue->tourist_name}}</h3></a>
+                                                       <p class="product-details">{{$turistValue->title}}</p>
                                                    </div>
                                                    <div class="pri-description-ca-h mobile-pri-description-ca-h">
-                                                       <h4 class="price-catagory">200 BDT</h4>
+                                                       <h4 class="price-catagory">{{$turistValue->price}} BDT</h4>
                                                        <a class=" " href="catagory_company_hotel_profile_details.html"><button type="submit" class="btn btn-default hotel-rel-cata-h-btn add-to-card">Booking</button></a>
                                                    </div>
                                                </div>
                                            </div>
                                        </div>
                                    </li>
+                              @endforeach     
                                    <!--product-1-->
-                                   <li class="h-ca-hotel-section">
+                                   <!-- <li class="h-ca-hotel-section">
                                        <div class="content-box single-product ">
                                            <div class=" h-ca-fa-body-hotel ">
                                                <div class="col-md-5 gird-2 h-ca-product-image">
@@ -665,9 +677,9 @@
                                                </div>
                                            </div>
                                        </div>
-                                   </li>
+                                   </li> -->
                                    <!--product-1-->
-                                   <li class="h-ca-hotel-section">
+                                   <!-- <li class="h-ca-hotel-section">
                                        <div class="content-box single-product ">
                                            <div class=" h-ca-fa-body-hotel ">
                                                <div class="col-md-5 gird-2 h-ca-product-image">
@@ -685,7 +697,7 @@
                                                </div>
                                            </div>
                                        </div>
-                                   </li>
+                                   </li> -->
                                </ul>
                                <!--product-1-->
                            </div>
